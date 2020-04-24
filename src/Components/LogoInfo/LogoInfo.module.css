@@ -1,0 +1,9 @@
+a.logoInfo{
+    padding: 5px 10px;
+}
+a.logoInfo:hover{
+    text-decoration: none;
+}
+.icon{
+    margin: 0 5px 0 0;
+}

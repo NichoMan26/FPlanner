@@ -1,2 +1,2 @@
-# FPlanner
-App for family managment
+# FamilyPlanner
+App for family management
