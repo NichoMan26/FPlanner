@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import {dateNow} from '../../assets/utils/methods'
+const moment = require('moment');
 const DateNow = (props) => {
-    const [date, setDate] = useState(dateNow())
+    const [date, setDate] = useState(moment().format('D.M.YY - H:m:ss'))
     
 
     const checkTime = () => {
-            setDate(dateNow())
+            setDate(moment().format('D.M.YY - H:m:ss'))
              clearTimeout(timerId);
     }
     let timerId = setInterval(checkTime, 1000)

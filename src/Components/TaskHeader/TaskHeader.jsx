@@ -8,7 +8,10 @@ const TaskHeader = ({task, number}) => {
             <span>№</span>
             <span>Title</span>
             <span>Date expiration</span>
-            <span className={clsx('text-center m-0 p-0 cursor-pointer')}></span>
+            <span type="submit" 
+                    className={clsx('ml-1 p-0', cls.button)}>
+                        <i className="icon-wrench"></i>
+                </span>
         </li>
     )
 }

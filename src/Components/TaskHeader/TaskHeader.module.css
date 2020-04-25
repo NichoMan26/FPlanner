@@ -1,4 +1,9 @@
 .task{
     display: grid;
-    grid-template-columns: 30px 1fr auto auto ;
+    grid-template-columns: 30px 1fr auto 30px ;
+}
+.button{
+    background: none;
+    border: none;
+    text-align: center;
 }
