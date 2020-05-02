@@ -5,7 +5,7 @@ const DateNow = (props) => {
     
 
     const checkTime = () => {
-            setDate(moment().format('D.M.YY - H:m:ss'))
+            setDate(moment().format('D MMM YY - H:m:ss'))
              clearTimeout(timerId);
     }
     let timerId = setInterval(checkTime, 1000)

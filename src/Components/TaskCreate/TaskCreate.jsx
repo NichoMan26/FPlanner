@@ -23,10 +23,9 @@ const TaskCreate = ({task, number, addNewTask}) => {
                 addNewTask({id:newTaskId,title:titleState, description:'', dateC:moment(), dateE:'', isDone:false})
                 setTitleState('')
                 setDisabled(false)
+                window.location.pathname = '/task/' + newTaskId // redirectim na SingleTask with id:(newTaskId)
                 }
             )
-            
-        
     }
 
     return(

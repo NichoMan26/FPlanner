@@ -1,8 +1,15 @@
 .task{
     display: grid;
-    grid-template-columns: 30px 1fr auto 30px 30px;
+    grid-template-columns: auto 30px 30px;
 }
 .icon{
     background: none;
     border: none;
+}
+.done{
+    text-decoration: line-through;
+}
+.taskBody{
+    display: grid;
+    grid-template-columns: 30px auto 105px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import cls from './App.module.css';
 
+
 import Header from '../Header/Header'
 import Content from '../Content/Content';
 

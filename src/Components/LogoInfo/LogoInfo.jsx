@@ -3,7 +3,7 @@ import cls from './LogoInfo.module.css'
 import clsx from 'clsx'
 
 const LogoInfo = (props) => {
-    const [logIn, setLogIn] = useState(true) /// after delete this hook
+    const [logIn, /*setLogIn*/] = useState(true) /// after delete this hook
     return(
             logIn // check login user or no and render appropriate component
                 ? <a className={clsx('border', 'border-primary', cls.logoInfo)} href="/login">

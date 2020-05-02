@@ -2,7 +2,8 @@ import * as axios from 'axios'
 
 export const instance = axios.create({
     //withCredentials:true,
-    baseURL:'http://localhost/',
+    //baseURL:'http://localhost/',
+    baseURL:'https://f-planner.herokuapp.com/',
     // headers: {  'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE, OPTIONS',
     //             'Access-Control-Allow-Origin': '*',
     //             'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
@@ -11,7 +12,7 @@ export const instance = axios.create({
 
 export const tasksAPI = {
     getTasks(){
-    return instance.get(`/task`)
+    return instance.get(`/tasks`)
     .then(response => response.data)
     },
     addTask(task){ //create new task
@@ -22,12 +23,21 @@ export const tasksAPI = {
         // let newTask = JSON.stringify(task)
         return instance.delete(`/task/${id}`)
     },
-    done(taskId){
+    done(taskId){ //set flag isDone in true
         let task = JSON.stringify(taskId)
         return instance.post(`/done`, {body:task})
     },
-    unDone(taskId){
+    unDone(taskId){ //set flag isDone in false
         return instance.delete(`/done/${taskId}`)
+    },
+    getTask(taskId){
+        return instance.get(`/task/${taskId}`)
+        .then(response => response.data)
+    },
+    updateTask(task){
+        let taskJSON = JSON.stringify(task)
+        return instance.put(`/task/${task.id}`, {task:taskJSON})
+        
     }
 //     unFollow(userId){
 //         return instance.delete(`follow/${userId}`)

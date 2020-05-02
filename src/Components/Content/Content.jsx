@@ -3,7 +3,7 @@ import {Route, Switch} from 'react-router-dom'
 // import cls from './Content.module.css'
 // import clsx from 'clsx'
 import TasksListContainer from '../TasksList/TasksListContainer'
-import SingleTask from '../SingleTask/SingleTask'
+import SingleTaskContainer from '../SingleTask/SingleTaskContainer'
 
 const Content = (props) => {
     return(
@@ -12,9 +12,7 @@ const Content = (props) => {
                     <Route exact path='/'>
                         <TasksListContainer/>
                     </Route>
-                    <Route path='/task/:taskId' >
-                        <SingleTask/>
-                    </Route>
+                    <Route path='/task/:taskId' render={(props) => <SingleTaskContainer {...props} />}/>    
                 <Switch/>
             </div>
     )
