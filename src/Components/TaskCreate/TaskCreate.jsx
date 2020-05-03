@@ -13,6 +13,7 @@ const TaskCreate = ({task, number, addNewTask}) => {
         setTitleState(e.currentTarget.value);
     }
     const onClickAddTaskHandler = (e) => {
+        console.log('onClickAddTaskHandler');
         e.preventDefault()
         if(!titleState.trim()) return
         setDisabled(true)
@@ -23,7 +24,7 @@ const TaskCreate = ({task, number, addNewTask}) => {
                 addNewTask({id:newTaskId,title:titleState, description:'', dateC:moment(), dateE:'', isDone:false})
                 setTitleState('')
                 setDisabled(false)
-                window.location.pathname = '/task/' + newTaskId // redirectim na SingleTask with id:(newTaskId)
+                //window.location.pathname = '/task#/' + newTaskId // redirectim na SingleTask with id:(newTaskId)
                 }
             )
     }
@@ -38,7 +39,7 @@ const TaskCreate = ({task, number, addNewTask}) => {
                             rows='1' 
                             className={clsx('m-0 py-0', cls.textarea)} 
                             type="text" />
-                <button onClick={onClickAddTaskHandler} 
+                <button  onClick={onClickAddTaskHandler} 
                         disabled={disabled}
                         type="submit" 
                         className={clsx('btn ml-1 p-0', cls.button)}>
