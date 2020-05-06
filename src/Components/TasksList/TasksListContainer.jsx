@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import TasksList from './TasksList'
 import {addNewTask, deleteTask, setTasks, doneTask, unDoneTask, addInDisabledTask, removeFromDisabledTask} from '../../redux/tasksReducer'
 import {tasksAPI} from '../../API/api'
+import { inOrderTasksByDateE } from '../../assets/utils/methods'
 
 
 
@@ -11,7 +12,7 @@ class TasksListContainer extends React.Component{
     
     componentDidMount(){
         tasksAPI.getTasks().then(data => {
-                this.props.setTasks(JSON.parse(data.body))
+                this.props.setTasks(inOrderTasksByDateE(JSON.parse(data.body)))
             }
         )
     }

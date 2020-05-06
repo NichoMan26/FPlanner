@@ -1,7 +1,7 @@
 const SET_SINGLE_STATE = 'SET_SINGLE_STATE'
 
 
-/////********************/////////////
+/////********************/////
 let initState = {
     id: null,
     title: '',

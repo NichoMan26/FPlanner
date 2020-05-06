@@ -2,8 +2,8 @@ import * as axios from 'axios'
 
 export const instance = axios.create({
     //withCredentials:true,
-    // baseURL:'http://localhost/',
-    baseURL:'https://f-planner.herokuapp.com/',
+    baseURL:'http://localhost/',
+    // baseURL:'https://f-planner.herokuapp.com/',
     // headers: {  'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE, OPTIONS',
     //             'Access-Control-Allow-Origin': '*',
     //             'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
